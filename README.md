@@ -1,7 +1,7 @@
-Grunt-Template
+Parse-Form-Template
 ==============
 
-## Dependencies For Front End Development
+## Dependencies For Development
 
 * __[Ruby](http://www.ruby-lang.org/en/)__: Necessary to utilize Compass.
 * __[Compass](http://compass-style.org)__: Used to build the stylesheets.
