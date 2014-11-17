@@ -1,0 +1,104 @@
+doctype html
+html(lang='en')
+  head
+
+    // Basic Page Needs
+    // ==================================================
+    meta(charset='utf-8')
+    title Template
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    // Mobile Specific Metas
+    // ==================================================
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="format-detection", content="telephone=no")
+
+    // CSS
+    // ==================================================
+
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Bitter:400,700')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic')
+    link(rel='stylesheet', href='css/main.css')
+
+    // Scripts
+    // ==================================================
+    script(src='http://www.parsecdn.com/js/parse-1.3.1.min.js')
+    script(src='javascripts/vendor/require.js')
+    script(src='javascripts/require_config.js')
+    <!--[if lt IE 10]>
+    <link href="css/ie8Styles.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="javascripts/lib/ie8Script.min.js"></script>
+    <![endif]-->
+    // Favicons
+    // ==================================================
+    link(rel='shortcut icon', href='images/favicon.ico')
+
+  body#home-page
+    script.
+      require(['jquery'], function($) {
+        $(document).ready(function() {
+          require(['javascripts/lib/main.js'], function() {
+          });
+        });
+      });
+
+    div.column.full-col#main-nav
+      div.container
+        h3 DEWS
+    div.column.full-col#aspot-banner
+      h1 Forms Man
+        p Forms dude
+    div.column.full-col.section-header
+      div.container
+        h2 These are some forms
+        p For real though
+    div.column.full-col.main-content
+      div.container#contact-forms
+        form.parse-form(data-object-name="SweetObject")
+          div.column.six-col.form-element
+            label(for="name")
+              span Name
+              input(type="text", name="name", placeholder="text")
+          div.column.six-col.form-element
+            label(for="isCool")
+              span Are you cool?
+              select(name="isCool")
+                option(value="Yes") Yes
+                option(value="No") No
+                option(value="Maybe") Maybe
+          div.column.six-col.form-element
+            fieldset#isPing
+              legend Do You Like Ping Pong
+              div
+                label(for="radio1")
+                  span Yes
+                  input(type="radio", value="Yes" name="radioExample")#radio1
+              div
+                label(for="radio2")
+                  span No
+                  input(type="radio", value="No" name="radioExample")#radio2
+          div.column.six-col.form-element
+            label(for="checkExample")
+              span I like banana
+              input(type="checkbox", name="checkExample")
+          div.column.six-col.form-element
+            label(for="textAreaExample")
+              span Textarea
+              textarea(name="textAreaExample", placeholder="text")
+
+          input(type="submit")
+
+    div.column.full-col#footer
+      div.container
+        p &copy; 2014 Footer Content
+
+
+
+
+
+
+
+
+

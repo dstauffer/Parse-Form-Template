@@ -1,0 +1,82 @@
+$sm: "only screen and (max-width : 480px)";
+$md: "only screen and (max-width : 768px)";
+$lg: "only screen and (max-width : 1024px)";
+$xl: "only screen and (max-width : 1280px)";
+
+.container {
+  width:100%;
+  margin:0 auto;
+  max-width: 80%;
+  @media #{$xl} {
+    max-width: 90%;
+  }
+  @media #{$lg} {
+    max-width: 90%;
+  }
+  @media #{$md} {
+    max-width: 90%;
+  }
+  @media #{$sm} {
+    max-width: 90%;
+  }
+
+}
+
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix, .row {
+  zoom: 1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  &:after { clear: both; }
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.full-col {
+  width: 100%;
+}
+
+.two-col {
+  width: 50%;
+}
+
+.three-col {
+  width: 25%;
+}
+
+.four-col {
+  width: 33.33%;
+}
+
+.six-col {
+  width: 50%;
+}
+
+.column {
+  float: left;
+  @media #{$md} {
+    width: 100%;
+  }
+  @media #{$sm} {
+    width: 100%;
+  }
+}
+

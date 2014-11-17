@@ -1,0 +1,84 @@
+@import "compass";
+@import "normalize";
+@import "reset";
+@import "base";
+@import "colors";
+@import "fonts";
+
+
+/* #General Styles
+================================================== */
+.hidden {
+  display: none;
+}
+
+.noRight {
+  margin-right: 0px !important;
+}
+
+.clear {
+  clear:both;
+}
+
+img.retina {
+  max-width: 100%;
+  height: auto;
+}
+
+#aspot-banner {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow: hidden;
+  display: table;
+  color: $white;
+  text-align: center;
+  margin: 60px 0 0 0;
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
+    @include single-text-shadow;
+  }
+  p {
+    @include single-text-shadow;
+    padding-top: 10px;
+  }
+}
+
+.main-content {
+  height: 1000px;
+  background: $light-gray;
+  color: $dark-gray-text;
+  padding: 30px 0px;
+  @media #{$md} {
+    text-align: center;
+  }
+  @media #{$sm} {
+    text-align: center;
+  }
+}
+
+.section-header {
+  padding: 20px 0px;
+  background: $white;
+  position: relative;
+  @include box-shadow(rgba(0, 0, 0, 0.15) 0 2px 3px);
+}
+
+#contact-forms {
+  max-width: 700px;
+  form {
+    .form-element {
+      width: 48%;
+    }
+    >div:nth-child(odd) {
+      margin-right: 4%;
+    }
+  }
+}
+
+@import "components/ui-elements";
+@import "views/_footer";
+@import "views/_home-page";
+@import "views/_main-nav";
