@@ -3,8 +3,7 @@ Parse.initialize("LO0EWUNNFz3ovQ1nHiv54s4Wc8YHBB4GjcorZI8B", "e33BCEwSf0Muc2AQqT
 $("form.parse-form").on("submit", (e) ->
   e.preventDefault()
   unless !checkIfFormIsValid()
-    console.log "submit"
-    ##createParseFormObject($(@).attr('data-object-name'), {name: 'Guy2'})
+    createParseFormObject($(@).attr('data-object-name'), getFormValues())
 )
 
 createParseFormObject = (Name, options) ->
@@ -12,6 +11,11 @@ createParseFormObject = (Name, options) ->
   formObject = new FormObject()
 
   formObject.save(options)
+
+getFormValues = () ->
+  {
+    name: $('input:text[name="name"]').val()
+  }
 
 checkIfFormIsValid = () ->
   return true
