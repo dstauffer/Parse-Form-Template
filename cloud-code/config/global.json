@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "_default": {
+            "link": "test app"
+        }, 
+        "test app": {
+            "applicationId": "LO0EWUNNFz3ovQ1nHiv54s4Wc8YHBB4GjcorZI8B", 
+            "masterKey": "RPTwZ15GAXkuzHzKRG7MJII7pHyjOto4gM30y5rv"
+        }
+    }
+}
